@@ -1,0 +1,53 @@
+:root {
+  --bg: #0f1115;
+  --fg: #e8eaed;
+  --muted: #9aa0a6;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html,
+body,
+#root {
+  height: 100%;
+  margin: 0;
+}
+
+body {
+  background: var(--bg);
+  color: var(--fg);
+  font-family: system-ui, -apple-system, "Segoe UI", sans-serif;
+}
+
+.app {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+}
+
+.app-header {
+  padding: 0.75rem 1.25rem;
+  border-bottom: 1px solid #262a33;
+}
+
+.app-header h1 {
+  margin: 0;
+  font-size: 1.1rem;
+  letter-spacing: 0.02em;
+}
+
+.app-header p {
+  margin: 0.15rem 0 0;
+  font-size: 0.8rem;
+  color: var(--muted);
+}
+
+/* The map fills the rest. RiskMap is absolutely positioned, so this needs
+   position: relative to contain it. */
+.app-map {
+  position: relative;
+  flex: 1;
+  min-height: 0;
+}
